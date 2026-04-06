@@ -4,7 +4,7 @@
 
 DiffDeck watches your Claude Code sessions and surfaces every file modification as a reviewable diff card in a sidebar panel. See what changed, why it changed, flag risky modifications, and ship with confidence — all without leaving VS Code.
 
-![DiffDeck — diff cards with risk badges, explanations, and confirm/reject](media/screenshot-review.png)
+![DiffDeck — diff cards with risk badges, explanations, and confirm/reject](https://raw.githubusercontent.com/ZhangHexiao/ClaudeDiffDeck/main/media/screenshot-review.png)
 
 ## Features
 
@@ -19,7 +19,7 @@ DiffDeck watches your Claude Code sessions and surfaces every file modification 
 
 ### Git Workflows
 
-![Git workflow buttons — Start, Save to Remote, Re-request Review](media/screenshot-workflows.png)
+![Git workflow buttons — Start, Save to Remote, Re-request Review](https://raw.githubusercontent.com/ZhangHexiao/ClaudeDiffDeck/main/media/screenshot-workflows.png)
 
 Three buttons at the bottom of the panel automate common git tasks:
 

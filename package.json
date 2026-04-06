@@ -1,8 +1,8 @@
 {
   "name": "diffdeck",
-  "displayName": "DiffDeck",
+  "displayName": "Claude DiffDeck",
   "description": "Review every file change Claude Code makes — with diffs, risk flags, and one-click git workflows.",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "license": "MIT",
   "publisher": "RodneyZhang",
   "icon": "media/icon.png",
