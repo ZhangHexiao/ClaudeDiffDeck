@@ -83,7 +83,7 @@ function render(batches: Batch[]): void {
       <div class="empty">
         <p>Run <code>claude</code> in the terminal. Changes will appear here after each turn.</p>
         <p>Use the buttons below to manage your git workflow.</p>
-        <p>First time? Run <strong>Claude Review: Install Hook</strong> in the Command Palette.</p>
+        <p>First time? Run <strong>DiffDeck: Install Hook</strong> in the Command Palette.</p>
       </div>`;
     return;
   }

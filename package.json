@@ -3,7 +3,23 @@
   "displayName": "DiffDeck",
   "description": "Review every file change Claude Code makes — with diffs, risk flags, and one-click git workflows.",
   "version": "0.0.1",
-  "publisher": "rodney",
+  "license": "MIT",
+  "publisher": "RodneyZhang",
+  "icon": "media/icon.png",
+  "categories": ["Other", "SCM Providers"],
+  "keywords": ["claude", "claude-code", "diff", "review", "git", "ai", "code-review"],
+  "galleryBanner": {
+    "color": "#1e1e2e",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ZhangHexiao/ClaudeDiffDeck"
+  },
+  "homepage": "https://github.com/ZhangHexiao/ClaudeDiffDeck#readme",
+  "bugs": {
+    "url": "https://github.com/ZhangHexiao/ClaudeDiffDeck/issues"
+  },
   "engines": { "vscode": "^1.85.0" },
   "main": "./dist/extension.js",
   "activationEvents": [
@@ -15,7 +31,7 @@
       "activitybar": [
         {
           "id": "claudeReview",
-          "title": "Claude Review",
+          "title": "DiffDeck",
           "icon": "media/icon.svg"
         }
       ]
@@ -30,27 +46,27 @@
       ]
     },
     "commands": [
-      { "command": "claudeReview.installHook", "title": "Claude Review: Install Hook" },
-      { "command": "claudeReview.clearBatches", "title": "Claude Review: Clear All" },
-      { "command": "claudeReview.refresh", "title": "Claude Review: Refresh" },
-      { "command": "claudeReview.moveToRightSidebar", "title": "Claude Review: Move to Right Sidebar" },
-      { "command": "claudeReview.gitStart", "title": "Claude Review: Start (Branch + Draft PR)" },
-      { "command": "claudeReview.gitSave", "title": "Claude Review: Save to Remote" },
-      { "command": "claudeReview.gitReReview", "title": "Claude Review: Re-request Review" }
+      { "command": "claudeReview.installHook", "title": "DiffDeck: Install Hook" },
+      { "command": "claudeReview.clearBatches", "title": "DiffDeck: Clear All" },
+      { "command": "claudeReview.refresh", "title": "DiffDeck: Refresh" },
+      { "command": "claudeReview.moveToRightSidebar", "title": "DiffDeck: Move to Right Sidebar" },
+      { "command": "claudeReview.gitStart", "title": "DiffDeck: Start (Branch + Draft PR)" },
+      { "command": "claudeReview.gitSave", "title": "DiffDeck: Save to Remote" },
+      { "command": "claudeReview.gitReReview", "title": "DiffDeck: Re-request Review" }
     ],
     "configuration": {
-      "title": "Claude Review",
+      "title": "DiffDeck",
       "properties": {
-        "claudeReview.riskyGlobs": {
+        "diffDeck.riskyGlobs": {
           "type": "array",
           "items": { "type": "string" },
           "default": [],
-          "description": "Additional glob patterns considered risky (e.g. 'src/secrets/**')."
+          "markdownDescription": "Additional glob patterns to flag as **HIGH** risk. Example: `src/core/**`, `src/auth/**`, `**/migrations/**`"
         },
-        "claudeReview.largeDeletionThreshold": {
+        "diffDeck.largeDeletionThreshold": {
           "type": "number",
           "default": 50,
-          "description": "Files with more than this many deleted lines are flagged as high risk."
+          "markdownDescription": "Files with more deleted lines than this threshold are flagged as **HIGH** risk."
         }
       }
     }

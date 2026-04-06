@@ -4,6 +4,8 @@
 
 DiffDeck watches your Claude Code sessions and surfaces every file modification as a reviewable diff card in a sidebar panel. See what changed, why it changed, flag risky modifications, and ship with confidence — all without leaving VS Code.
 
+![DiffDeck — diff cards with risk badges, explanations, and confirm/reject](media/screenshot-review.png)
+
 ## Features
 
 ### Change Review
@@ -16,6 +18,8 @@ DiffDeck watches your Claude Code sessions and surfaces every file modification 
 - **Confirm / Reject** — Confirm marks a change as reviewed; Reject marks it *and* opens VS Code's built-in diff editor so you can selectively revert lines
 
 ### Git Workflows
+
+![Git workflow buttons — Start, Save to Remote, Re-request Review](media/screenshot-workflows.png)
 
 Three buttons at the bottom of the panel automate common git tasks:
 
@@ -96,8 +100,8 @@ Use the three buttons at the bottom of the panel:
 
 | Setting | Type | Default | Description |
 |---------|------|---------|-------------|
-| `claudeReview.riskyGlobs` | `string[]` | `[]` | Additional glob patterns to flag as high risk (e.g. `"src/secrets/**"`) |
-| `claudeReview.largeDeletionThreshold` | `number` | `50` | Files with more deleted lines than this are flagged as high risk |
+| `diffDeck.riskyGlobs` | `string[]` | `[]` | Additional glob patterns to flag as high risk (e.g. `"src/secrets/**"`) |
+| `diffDeck.largeDeletionThreshold` | `number` | `50` | Files with more deleted lines than this are flagged as high risk |
 
 ### Built-in risk patterns
 

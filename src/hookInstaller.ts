@@ -20,14 +20,14 @@ const MARKER = 'stop-hook.js';
 export async function installHook(extensionPath: string): Promise<void> {
   const folders = vscode.workspace.workspaceFolders;
   if (!folders || folders.length === 0) {
-    vscode.window.showErrorMessage('Claude Review: Please open a workspace first.');
+    vscode.window.showErrorMessage('DiffDeck: Please open a workspace first.');
     return;
   }
   const root = folders[0].uri.fsPath;
 
   const hookScript = path.join(extensionPath, 'hooks', 'stop-hook.js');
   if (!fs.existsSync(hookScript)) {
-    vscode.window.showErrorMessage(`Claude Review: Hook script not found at ${hookScript}`);
+    vscode.window.showErrorMessage(`DiffDeck: Hook script not found at ${hookScript}`);
     return;
   }
 
@@ -86,6 +86,6 @@ export async function installHook(extensionPath: string): Promise<void> {
   }
 
   vscode.window.showInformationMessage(
-    'Claude Review: Hook installed ✓ Run `claude` in the terminal — changes will appear here after each turn.'
+    'DiffDeck: Hook installed ✓ Run `claude` in the terminal — changes will appear here after each turn.'
   );
 }

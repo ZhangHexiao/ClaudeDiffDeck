@@ -34,7 +34,7 @@ export function activate(context: vscode.ExtensionContext): void {
   const watcher = new BatchWatcher((raw, sourcePath) => {
     const batch = enrichBatch(raw);
     store.addBatch(batch);
-    console.log('Claude Review: loaded batch', batch.id, 'from', sourcePath);
+    console.log('DiffDeck: loaded batch', batch.id, 'from', sourcePath);
   });
   watcher.start();
 
@@ -85,18 +85,18 @@ async function moveToRightSidebar(): Promise<void> {
       await vscode.commands.executeCommand('workbench.view.extension.claudeReview');
       await vscode.commands.executeCommand('workbench.action.moveView');
       vscode.window.showInformationMessage(
-        'Please choose "Secondary Side Bar" to move the Claude Review panel to the right.'
+        'Please choose "Secondary Side Bar" to move the DiffDeck panel to the right.'
       );
     } catch {
       vscode.window.showWarningMessage(
-        'Could not auto-move. Right-click the Claude Review view header and choose "Move View → Secondary Side Bar".'
+        'Could not auto-move. Right-click the DiffDeck view header and choose "Move View → Secondary Side Bar".'
       );
     }
   }
 }
 
 function enrichBatch(raw: RawBatch): Batch {
-  const config = vscode.workspace.getConfiguration('claudeReview');
+  const config = vscode.workspace.getConfiguration('diffDeck');
   const userGlobs = config.get<string[]>('riskyGlobs', []);
   const largeThreshold = config.get<number>('largeDeletionThreshold', 50);
 

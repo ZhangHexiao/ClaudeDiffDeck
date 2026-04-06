@@ -96,7 +96,7 @@ export async function startWorkflow(store: BatchStore): Promise<void> {
 
         progress.report({ message: 'Creating draft PR...' });
         const title = `${type}: ${slug}`;
-        const body = `## Description\\n\\n${escapeShell(description)}\\n\\n---\\n*Created via Claude Review extension*`;
+        const body = `## Description\\n\\n${escapeShell(description)}\\n\\n---\\n*Created via DiffDeck*`;
         const { stdout: prUrl } = await run(
           `gh pr create --draft --title "${escapeShell(title)}" --body "${body}"`,
           cwd

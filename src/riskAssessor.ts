@@ -86,25 +86,25 @@ export function assessRisk(
   const matched = allGlobs.find(g => matchGlob(g, relPath));
   if (matched) {
     level = 'high';
-    reasons.push(`敏感配置文件 / Sensitive file (${matched})`);
+    reasons.push(`Sensitive file (${matched})`);
   }
 
   if (changeType === 'delete') {
     level = 'high';
-    reasons.push('文件被删除 / File deleted');
+    reasons.push('File deleted');
   }
 
   if (stats.deleted > largeDeletionThreshold) {
     level = 'high';
-    reasons.push(`大量删除 / Large deletion (${stats.deleted} lines)`);
+    reasons.push(`Large deletion (${stats.deleted} lines)`);
   }
 
   if (changeType === 'create' && !relPath.includes('/')) {
     if (level === 'low') level = 'medium';
-    reasons.push('根目录新文件 / New file at repo root');
+    reasons.push('New file at repo root');
   }
 
-  if (reasons.length === 0) reasons.push('常规改动 / Routine change');
+  if (reasons.length === 0) reasons.push('Routine change');
 
   return { level, reasons };
 }
