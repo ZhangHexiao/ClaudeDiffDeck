@@ -1,5 +1,28 @@
+# Dependencies
 node_modules/
+
+# Build output
 dist/
+out/
+
+# Packaged extension
 *.vsix
+
+# macOS
 .DS_Store
+
+# Claude Code hook runtime data
 .claude/pending-review/
+.claude/settings.local.json
+
+# Editor
+.vscode/launch.json
+.vscode/tasks.json
+.vscode/settings.json
+
+# Logs
+*.log
+npm-debug.log*
+
+# TypeScript incremental build cache
+*.tsbuildinfo

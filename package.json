@@ -1,7 +1,7 @@
 {
-  "name": "claude-review",
-  "displayName": "Claude Review",
-  "description": "Review file changes made by Claude Code in a side panel",
+  "name": "diffdeck",
+  "displayName": "DiffDeck",
+  "description": "Review every file change Claude Code makes — with diffs, risk flags, and one-click git workflows.",
   "version": "0.0.1",
   "publisher": "rodney",
   "engines": { "vscode": "^1.85.0" },
