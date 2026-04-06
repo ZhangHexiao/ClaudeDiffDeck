@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"/Users/rodneyhxzhang/Documents/Projects_Rodney/claude_extension/hooks/stop-hook.js\""
+          }
+        ]
+      }
+    ]
+  }
+}

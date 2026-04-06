@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src {{cspSource}} 'unsafe-inline'; script-src 'nonce-{{nonce}}';">
+  <link rel="stylesheet" href="{{styleUri}}">
+  <title>Claude Review</title>
+</head>
+<body>
+  <div id="toolbar">
+    <span id="summary">Waiting…</span>
+    <button id="clearBtn" title="Clear all pending reviews">Clear</button>
+  </div>
+  <div id="root"></div>
+  <div id="footer">
+    <button id="startBtn" title="Create branch and draft PR">Start</button>
+    <button id="saveBtn" title="Auto-commit and push to remote">Save to Remote</button>
+    <button id="reviewBtn" title="Push and re-request review">Re-request Review</button>
+  </div>
+  <script nonce="{{nonce}}" src="{{scriptUri}}"></script>
+</body>
+</html>
